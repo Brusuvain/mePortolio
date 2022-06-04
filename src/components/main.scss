@@ -1,0 +1,48 @@
+@use "../App" as poo;
+.main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    // background-color: rgba(152, 57, 179,.8);
+    z-index: 1;
+
+    
+
+    .backgroundImage{
+        z-index: -1;
+        position:absolute;
+        top: 0;
+        // right: -150px;
+        // left: 150px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .outer{
+        //background-color: rgb(8, 112, 29);
+    }
+
+    .backImage{
+        // width: 100%;
+        object-fit: contain ;
+        position: absolute;
+        top: 100%;
+        
+        transform: translate(-100%, -130%);
+        opacity: 1;
+        border:10px solid poo.$lighter;
+        border-radius: 800px;
+    }
+}
+
+@media screen and (min-width:769px)
+{
+    .main{
+        width: calc(100% - 150px);
+        margin-left: 150px;
+
+        .backImage{
+            left: calc( 100% - 120px);
+        }
+    }
+}
